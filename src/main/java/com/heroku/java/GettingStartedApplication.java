@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Map;
 
+import java.util.Random;
+
 @SpringBootApplication
 @Controller
 public class GettingStartedApplication {
@@ -40,14 +42,13 @@ public class GettingStartedApplication {
             }
 
             model.put("records", output);
+            System.out.println("Nathaniel Williams");
             return "database";
 
         } catch (Throwable t) {
             model.put("message", t.getMessage());
             return "error";
         }
-
-        System.out.println("Nathaniel Williams");
     }
 
     private String getRandomString()
